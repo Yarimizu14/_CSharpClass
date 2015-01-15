@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClassBasic : MonoBehaviour {
+public class ClassBasic {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    protected string message = "ClassBasic";
+
+    public ClassBasic () {
+        Debug.Log("ClassBasicのコンスタラクタ");
+    }
+
+    public ClassBasic (string message, int num) {
+        Debug.Log("ClassBasicのコンスタラクタのオーバーロード ---- " + message + " " + num);
+        this.message = message;
+    }
+
+    ~ClassBasic () {
+        Debug.Log("ClassBasicのデストラクタ ---- " + this.message);
+    }
 }
+
