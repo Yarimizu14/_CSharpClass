@@ -18,9 +18,14 @@ public class Main3 : MonoBehaviour {
          */
         ClassAbstractBase b = new ClassExtendAbstractBase();
         b.Test();
+
+        Debug.Log(" ==============InterfaceBase============== ");
+        ClassInterfaceImplement c = new ClassInterfaceImplement();
+        c.InterfaceTest();
     }
 
     // Update is called once per frame
+    //
     void Update () {
     }
 }
